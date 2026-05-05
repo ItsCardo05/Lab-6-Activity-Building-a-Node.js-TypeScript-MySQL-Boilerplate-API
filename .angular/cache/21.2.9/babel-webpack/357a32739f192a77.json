@@ -1,0 +1,1 @@
+{"ast":null,"code":"export * from './home. component';","map":{"version":3,"names":[],"sources":["C:\\Users\\Renelle\\OneDrive\\Desktop\\angular-21-boilerplate\\src\\app\\home\\index.ts"],"sourcesContent":["export * from './home. component';"],"mappings":"AAAA,cAAc,mBAAmB","ignoreList":[]},"metadata":{},"sourceType":"module","externalDependencies":[]}
