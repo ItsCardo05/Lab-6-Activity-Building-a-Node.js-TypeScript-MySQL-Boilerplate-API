@@ -13,6 +13,7 @@ import { HomeComponent } from './home';
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers';
+import { environment } from '@environments/environment';
 
 @NgModule({
   imports: [
@@ -33,8 +34,8 @@ import { fakeBackendProvider } from './_helpers';
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
-    // fake backend (optional)
-    fakeBackendProvider
+    // only use fake backend in development
+    ...(environment.production ? [] : [fakeBackendProvider])
   ],
 
   bootstrap: [AppComponent]
